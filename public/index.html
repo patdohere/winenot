@@ -1,6 +1,22 @@
 <!DOCTYPE html>
     <head>
       <title>wine not?</title>
+
+      <script type="text/template"  id="wine-template"> 
+        <h1><%=name%></h1>
+        <ul class= "wine-attributes"> 
+            <li><%=type%></li>
+            <li><%=color%></li>
+            <li><%=fruit%></li>
+            <li><%=other%></li>
+            <li><%=oak%></li>
+            <li><%=tannin%></li>
+            <li><%=acidity%></li>
+            <li><%=abv%></li>
+            <li><%=region%></li>
+        </ul>
+
+      </script>
     </head>
     <body>
         <!-- // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
@@ -8,7 +24,6 @@
         <script src="js/vendor/jquery-1.11.0.js"></script>
         <script src="js/vendor/underscore.js"></script>
         <script src="js/vendor/backbone.js"></script>
-
         <script src="js/winenot.js"></script>
 
 
@@ -18,5 +33,11 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+
+        <div id="container"></div>
+
+
+
+
     </body>
 </html>

@@ -1,9 +1,11 @@
 (function($){
-	window.Wine = Backbone.Model.extend({});
+	var Wine = Backbone.Model.extend({
+
+	});
 
 	window.Wines = Backbone.Collection.extend({
-		model : Wine,
-
+		model: Wine,
+        url: "/wine"
 	});
 
 	window.wine = new Wine({
@@ -28,6 +30,27 @@
       "acidity": "Medium",
       "abv": "12% - 15%",
       "region": ["france", "italy", "us", "australia", "chile", "argentina"]
+    });
+
+    window.WineView = Backbone.View.extend({
+        template: "#wine-template",
+        tag: 'li',
+        className: 'wine',
+
+        initialize: function() {
+            _.bindAll(this, 'render');
+            this.initializeTemplate();
+        },
+        
+        initializeTemplate: function() {
+            this.template = _.template($(this.template).html());
+        },
+
+        render: function() {
+
+            $(this.el).html(this.template(this.model.toJSON()));
+            return this;
+        }
     });
 
 })(jQuery);
