@@ -11,5 +11,20 @@
   "engines": {
     "node": "0.10.x",
     "npm": "1.4.x"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patdohere/winenot.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/patdohere/winenot/issues"
+  },
+  "homepage": "https://github.com/patdohere/winenot"
 }

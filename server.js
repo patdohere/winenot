@@ -11,12 +11,15 @@ app.configure(function () {
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+var wines = require('./routes/wines');
+
+app.get('/wines', wines.findAll);
+app.post('/wines', wines.addWine);
+app.get('/wines/:id', wines.findById);
+app.put('/wines/:id', wines.updateWine);
+app.delete('/wines/:id', wines.deleteWine);
+
 var server = http.createServer(app).listen(app.get('port'), function () {
   console.log("Server listening on port " + app.get('port'));
 });
 
-// app.get('/rooms', rooms.findAll);
-// app.post('/rooms', rooms.addRoom);
-// app.get('/rooms/:id', rooms.findById);
-// app.put('/rooms/:id', rooms.updateRoom);
-// app.delete('/rooms/:id', rooms.deleteRoom);
