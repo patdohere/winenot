@@ -731,7 +731,7 @@ MongoClient.connect(MONGOHQ_URL, function(err, db) {
   // operate on the collection named "test"
   var collection = db.collection(collectionName)
  
-  db.collection('test').remove(function(err, result) {
+  collection.remove(function(err, result) {
     if (err) {
       return console.error(err)
     }
