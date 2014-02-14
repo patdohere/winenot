@@ -1,5 +1,5 @@
-window.Wines = Backbone.Collections.extend({
-  model: Wines,
+window.Wines = Backbone.Collection.extend({
+  model: Wine,
   url: "/wines",
 
   initialize: function(){

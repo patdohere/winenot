@@ -1,3 +1,3 @@
-window.Wine = Backbone.Models.extend({
+window.Wine = Backbone.Model.extend({
 
 });
