@@ -86,9 +86,9 @@ MongoClient.connect(MONGOHQ_URL, function(err, db) {
               for (var f = 3; f >= 0; f--) {  
                 for (var g = 2; g >= 0; g--) {  
                   
+                  var x = [a, b, c, d, e, f, g];
+                  var y = [0,0,0,0,0,0,0,0,0,0];
                   for (var i = 9; i >= 0; i--) {
-                    var x = [a, b, c, d, e, f, g];
-                    var y = [0,0,0,0,0,0,0,0,0,0];
                     y[i] = y[i] +
                     Table[0][a][i] +
                     Table[1][b][i] +
@@ -97,22 +97,22 @@ MongoClient.connect(MONGOHQ_URL, function(err, db) {
                     Table[4][e][i] +
                     Table[5][f][i] +
                     Table[6][g][i];
+                  };
 
-                    counter = counter + 1;
-                    console.log('inserting'+counter+'document...'+x)
-                    collection.insert({'input':x, 'output':y}, function(err, docs) {
+                  counter = counter + 1;
+                  console.log('combination: '+counter+' input: '+x+' output: '+y)
+                  collection.insert({'input':x, 'output':y}, function(err, docs) {
+                    if (err) {
+                      return console.error(err)
+                    }
+                    console.log('just inserted ', docs.length, ' new documents!')
+                    collection.find({}).toArray(function(err, docs) {
                       if (err) {
                         return console.error(err)
                       }
-                      console.log('just inserted ', docs.length, ' new documents!')
-                      collection.find({}).toArray(function(err, docs) {
-                        if (err) {
-                          return console.error(err)
-                        }
-                        console.log('database populated')
-                      })
+                      console.log('database populated')
                     })
-                  };
+                  })
                 };    
               };
             };
