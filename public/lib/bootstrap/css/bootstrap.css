@@ -12,6 +12,7 @@ html {
 }
 body {
   margin: 0;
+  background-image: url('http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg')
 }
 article,
 aside,
@@ -183,6 +184,13 @@ table {
 td,
 th {
   padding: 0;
+}
+
+td.winenot {
+  padding: 0;
+  background-color:#c0c0c0;
+
+
 }
 @media print {
   * {

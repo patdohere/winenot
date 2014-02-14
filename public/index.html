@@ -9,7 +9,12 @@
   <body>
     <div id="header"><h1>Home</h1></div>
 
-
+    <style>
+    li{
+        margin:2em;
+        background-color: yellow;
+    }
+    </style>
 
     <div id="footer"></div>
 
@@ -30,6 +35,10 @@
     <!-- Views -->
     <script src="js/views/wineView.js"></script>
 
+  <script type="text/template" id="winelist-template">
+<ul id = "wines"></ul>
+</script>
+
 
     <script type="text/template" id="wine-template">
 <li><span class="wine-attribute"><%= name %></span></li>
@@ -46,23 +55,92 @@
     <script src="js/views/notFoundView.js"></script> -->
 
     <!-- Router -->
-  
+
 
 <div id="container">
 </div>
 <script text="text/javascript">
-  wine = new Wine({ 
-        name: 'pinot noir',
-        type: 'the best',
-        color: 'meow',
-        glass: 'BIG',
-        serving: '100OZ',
-        servingf: '1',
-        servingc: '2',
-        alcohol: '400'
-    });
-    wineView = new WineView({model:wine});
-    $('#container').append(wineView.render().el);
+   wine = new Wine({ 
+         name: 'pinot noir',
+         type: 'the best',
+         color: 'meow',
+         glass: 'BIG',
+         serving: '100OZ',
+         servingf: '1',
+         servingc: '2',
+         alcohol: '400'
+     });
+      wine3 = new Wine({ 
+         name: 'pinot noir',
+         type: 'the best',
+         color: 'meow',
+         glass: 'BIG',
+         serving: '100OZ',
+         servingf: '1',
+         servingc: '2',
+         alcohol: '400'
+     });
+         wine2 = new Wine({ 
+         name: 'pinot noir',
+         type: 'the best',
+         color: 'meow',
+         glass: 'BIG',
+         serving: '100OZ',
+         servingf: '1',
+         servingc: '2',
+         alcohol: '400'
+     });
+  //   wineView = new WineView({model:wine});
+//     $('#container').append(wineView.render().el);*
+ /*var table =  [
+  {
+    "wine":"Cabernet Sauvignon",
+    "type":"Bold Red",
+    "color":"Deep Purple",
+    "glass":"Bold Red Wine Glass",
+    "serving":"Cellar",
+    "servingF":62,
+    "servingC":17,
+    "abvH":12,
+    "abvL":17,
+    "calL":150,
+    "calH":200,
+    "open":"4 Days",
+    "storage":"10-20 Years"
+  },
+  {
+    "wine":"Malbec",
+    "type":"Bold Red",
+    "color":"Deep Purple",
+    "glass":"Bold Red Wine Glass",
+    "serving":"Cellar",
+    "servingF":62,
+    "servingC":17,
+    "abvH":12,
+    "abvL":17,
+    "calL":150,
+    "calH":200,
+    "open":"4 Days",
+    "storage":"5-10 Years"
+  },
+  {
+    "wine":"Malbec",
+    "type":"Bold Red",
+    "color":"Deep Purple",
+    "glass":"Bold Red Wine Glass",
+    "serving":"Cellar",
+    "servingF":62,
+    "servingC":17,
+    "abvH":12,
+    "abvL":17,
+    "calL":150,
+    "calH":200,
+    "open":"4 Days",
+    "storage":"5-10 Years"
+  }];*/
+    winerack = new WineRack([wine,wine2,wine3]);
+
+   // $('#container').append(winerackview.render());
 
 </script>
 
