@@ -1,4 +1,4 @@
-var Winenot = Backbone.Router.extend({
+/*var Winenot = Backbone.Router.extend({
   routes: {
     ""               : "home",
     "notFound"      : "notFound"
@@ -24,7 +24,20 @@ var Winenot = Backbone.Router.extend({
   }
 });
 
-utils.loadTemplate(['NotFoundView', 'HomeView', 'NavBarView'], function(){
+utils.loadTemplate(['NotFoundView', 'HomeView', 'NavBarView', 'WineView'], function(){
   app = new Winenot();
   Backbone.history.start();
-})
+})*/
+
+    wine = new Wine({ 
+        name: 'pinot noir',
+        type: 'the best',
+        color: 'meow',
+        glass: 'BIG',
+        serving: '100OZ',
+        servingf: '1',
+        servingc: '2',
+        alcohol: '400'
+    });
+    wineView = new WineView({model:wine});
+    $('#container').append(wineView.render().el);

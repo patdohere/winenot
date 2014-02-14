@@ -7,9 +7,9 @@
     <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header"><h1>Home</h1></div>
 
-    <div id="content"></div>
+
 
     <div id="footer"></div>
 
@@ -26,13 +26,45 @@
     <!-- Models -->
     <script src="js/models/wine.js"></script>
     <!-- Collections -->
-    <script src="js/collections/wines.js"></script>
+    <script src="js/collections/wineRack.js"></script>
     <!-- Views -->
-    <script src="js/views/homeView.js"></script>
+    <script src="js/views/wineView.js"></script>
+
+
+    <script type="text/template" id="wine-template">
+<li><span class="wine-attribute"><%= name %></span></li>
+<li><span class="wine-attribute"><%= type %></span></li>
+<li><span class="wine-attribute"><%= color %></span></li>
+<li><span class="wine-attribute"><%= glass %></span></li>
+<li><span class="wine-attribute"><%= serving %></span></li>
+<li><span class="wine-attribute"><%= servingf%></span></li>
+<li><span class="wine-attribute"><%= servingc %></span></li>
+<li><span class="wine-attribute"><%= alcohol %></span></li>
+</script>
+    <!-- <script src="js/views/homeView.js"></script>
     <script src="js/views/navBarView.js"></script>
-    <script src="js/views/notFoundView.js"></script>
+    <script src="js/views/notFoundView.js"></script> -->
 
     <!-- Router -->
-    <script src="js/main.js"></script>
+  
+
+<div id="container">
+</div>
+<script text="text/javascript">
+  wine = new Wine({ 
+        name: 'pinot noir',
+        type: 'the best',
+        color: 'meow',
+        glass: 'BIG',
+        serving: '100OZ',
+        servingf: '1',
+        servingc: '2',
+        alcohol: '400'
+    });
+    wineView = new WineView({model:wine});
+    $('#container').append(wineView.render().el);
+
+</script>
+
   </body>
 </html>
