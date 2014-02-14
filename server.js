@@ -1,25 +1,26 @@
 var express = require('express'),
     path = require('path'),
-    http = require('http');
+    http = require('http'),
+    io = require('socket.io'),
+    wine = require('./routes/wines');
 
 var app = express();
 
 app.configure(function () {
-  app.set('port', process.env.PORT || 8080);
-  app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
-  app.use(express.bodyParser()),
-  app.use(express.static(path.join(__dirname, 'public')));
+    app.set('port', process.env.PORT || 8080);
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser())
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
-var wines = require('./routes/wines');
+var server = http.createServer(app);
 
-app.get('/wines', wines.findAll);
-app.post('/wines', wines.addWine);
-app.get('/wines/:id', wines.findById);
-app.put('/wines/:id', wines.updateWine);
-app.delete('/wines/:id', wines.deleteWine);
-
-var server = http.createServer(app).listen(app.get('port'), function () {
-  console.log("Server listening on port " + app.get('port'));
+server.listen(app.get('port'), function () {
+    console.log("Express server listening on port " + app.get('port'));
 });
 
+app.get('/wines', wine.findAll);
+app.get('/wines/:id', wine.findById);
+app.post('/wines', wine.add);
+app.put('/wines/:id', wine.update);
+app.delete('/wines/:id', wine.delete);
