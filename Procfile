@@ -1,1 +1,1 @@
-web: node matchAlg.js
+web: node server.js
