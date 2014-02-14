@@ -20,11 +20,4 @@ server.listen(app.get('port'), function () {
 });
 
 app.get('/wines', wine.findAll);
-<<<<<<< HEAD
 app.get('/wines/:id', wine.findById);
-app.post('/wines', wine.add);
-app.put('/wines/:id', wine.update);
-app.delete('/wines/:id', wine.delete);
-=======
-app.get('/wines/:id', wine.findById);
->>>>>>> f3414f6e8988cb90791412961c6692bf57f3be88

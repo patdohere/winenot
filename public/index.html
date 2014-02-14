@@ -7,16 +7,7 @@
     <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id="header"><h1>Home</h1></div>
-
-    <style>
-    li{
-        margin:2em;
-        background-color: yellow;
-    }
-    </style>
-
-    <div id="footer"></div>
+    <div id="container"></div>
 
     <!-- Libraries -->
     <script src="lib/jquery/jquery-2.1.0.min.js"></script>
@@ -25,124 +16,13 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>    
 
     <!-- Plugins -->
-    <script src="js/utils.js"></script>
     
     <!-- Application -->
+    <script src="js/main.js"></script>
+
     <!-- Models -->
-    <script src="js/models/wine.js"></script>
     <!-- Collections -->
-    <script src="js/collections/wineRack.js"></script>
     <!-- Views -->
-    <script src="js/views/wineView.js"></script>
-
-  <script type="text/template" id="winelist-template">
-<ul id = "wines"></ul>
-</script>
-
-
-    <script type="text/template" id="wine-template">
-<li><span class="wine-attribute"><%= name %></span></li>
-<li><span class="wine-attribute"><%= type %></span></li>
-<li><span class="wine-attribute"><%= color %></span></li>
-<li><span class="wine-attribute"><%= glass %></span></li>
-<li><span class="wine-attribute"><%= serving %></span></li>
-<li><span class="wine-attribute"><%= servingf%></span></li>
-<li><span class="wine-attribute"><%= servingc %></span></li>
-<li><span class="wine-attribute"><%= alcohol %></span></li>
-</script>
-    <!-- <script src="js/views/homeView.js"></script>
-    <script src="js/views/navBarView.js"></script>
-    <script src="js/views/notFoundView.js"></script> -->
-
     <!-- Router -->
-
-
-<div id="container">
-</div>
-<script text="text/javascript">
-   wine = new Wine({ 
-         name: 'pinot noir',
-         type: 'the best',
-         color: 'meow',
-         glass: 'BIG',
-         serving: '100OZ',
-         servingf: '1',
-         servingc: '2',
-         alcohol: '400'
-     });
-      wine3 = new Wine({ 
-         name: 'pinot noir',
-         type: 'the best',
-         color: 'meow',
-         glass: 'BIG',
-         serving: '100OZ',
-         servingf: '1',
-         servingc: '2',
-         alcohol: '400'
-     });
-         wine2 = new Wine({ 
-         name: 'pinot noir',
-         type: 'the best',
-         color: 'meow',
-         glass: 'BIG',
-         serving: '100OZ',
-         servingf: '1',
-         servingc: '2',
-         alcohol: '400'
-     });
-  //   wineView = new WineView({model:wine});
-//     $('#container').append(wineView.render().el);*
- /*var table =  [
-  {
-    "wine":"Cabernet Sauvignon",
-    "type":"Bold Red",
-    "color":"Deep Purple",
-    "glass":"Bold Red Wine Glass",
-    "serving":"Cellar",
-    "servingF":62,
-    "servingC":17,
-    "abvH":12,
-    "abvL":17,
-    "calL":150,
-    "calH":200,
-    "open":"4 Days",
-    "storage":"10-20 Years"
-  },
-  {
-    "wine":"Malbec",
-    "type":"Bold Red",
-    "color":"Deep Purple",
-    "glass":"Bold Red Wine Glass",
-    "serving":"Cellar",
-    "servingF":62,
-    "servingC":17,
-    "abvH":12,
-    "abvL":17,
-    "calL":150,
-    "calH":200,
-    "open":"4 Days",
-    "storage":"5-10 Years"
-  },
-  {
-    "wine":"Malbec",
-    "type":"Bold Red",
-    "color":"Deep Purple",
-    "glass":"Bold Red Wine Glass",
-    "serving":"Cellar",
-    "servingF":62,
-    "servingC":17,
-    "abvH":12,
-    "abvL":17,
-    "calL":150,
-    "calH":200,
-    "open":"4 Days",
-    "storage":"5-10 Years"
-  }];*/
-    winerack = new WineRack([wine,wine2,wine3]);
-
-   // $('#container').append(winerackview.render());
-
-</script>
-
   </body>
 </html>
