@@ -1,8 +1,3 @@
-window.Wine = Backbone.Model.extend({
-
-});
-
-
 WineView = Backbone.View.extend({
 	template : '#wine-template',
 	tag: 'li',
@@ -20,22 +15,8 @@ WineView = Backbone.View.extend({
 
 	render: function(){
 		$(this.el).html(this.template(this.model.toJSON()));
- 
 		return this;
 	}
 
 
-});
-
-window.WineRack = Backbone.Collection.extend({
-  model: Wine,
-  url: "/winerack",
-
-  initialize: function(){
-
-  },
-
-  render: function(){
-
-  }
 });
