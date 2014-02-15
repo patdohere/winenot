@@ -7,8 +7,97 @@
          url('Corbert-Regular-webfont.svg#corbertregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+
+
+/* Theme */
+
+/*
+html { 
+    background: url(http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+*/
+
+div .row show-grid {
+  background-image: url('http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg')
+
 
 }
+
+body {
+
+margin:0;
+  background-image: url('http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg')
+}
+
+.jumbotron {
+  padding: 30px;
+  /*color: inhekrit; */
+  background-color: rgba(0,0,0,0.6);
+
+/*  opacity:0.6;*/
+}
+
+.col-md-2 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgba(0,0,0,0.6);
+
+
+
+}
+
+.jumbotron p {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-color: #000;
+
+}
+
+h1 {
+	text-decoration: none;
+	font-size: 
+}
+
+h1 small {
+	font-family: Tahoma, Geneva,  sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+div .winenot-footer {
+
+	background-color: #000;
+
+
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 60px;
+    font-color: #000;
+    font-family: 'corbertregular', sans-serif;
+    
+  }
+
 
 /*Pop out menu */
 
@@ -47,82 +136,3 @@ img {
 #trigger {                            /* shift text down to center it */
     padding-top: 67px;
 }
-
-/* Theme */
-
-div .row show-grid {
-  background-image: url('http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg')
-
-
-}
-
-body {
-
-
-  background-image: url('http://www.hiltonanatolehotel.com/assets/resources/masthead/dining/di-06.jpg')
-}
-
-.jumbotron {
-  padding: 30px;
-  /*color: inhekrit; */
-  background-color: rgba(0,0,0,0.6);
-
-/*  opacity:0.6;*/
-}
-
-.col-md-2 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  background-color: rgba(0,0,0,0.6);
-
-
-
-}
-
-.jumbotron p {
-	font-family: Tahoma, Geneva, sans-serif;
-	font-color: #000;
-
-}
-
-h1 {
-
-
-	text-decoration: none;
-}
-
-h1 small {
-	font-family: Tahoma, Geneva,  sans-serif;
-	font-size: 30px;
-	font-weight: normal;
-	font-style: normal;
-
-
-}
-
-div .winenot-footer {
-
-	background-color: #000;
-
-
-}
-
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-  .container .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 60px;
-    font-color: #000;
-    font-family: 'corbertregular', sans-serif;
-    
-  }
-
