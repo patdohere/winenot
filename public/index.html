@@ -7,7 +7,26 @@
     <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id="container"></div>
+    <div id="content">
+       <script type="text/template" id="wine-template">
+        <h1><span class="wine-attribute"><%= wine %> </span></h1>
+        <li><span class="wine-attribute"><%= type %> </span></li>
+        <li><span class="wine-attribute"><%= color %> </span></li>
+        <li><span class="wine-attribute"><%= glass %> </span></li>
+        <li><span class="wine-attribute"><%= serving %> </span></li>
+        <li><span class="wine-attribute"><%= servingF %> </span></li>
+        <li><span class="wine-attribute"><%= servingC %> </span></li>
+        <li><span class="wine-attribute"><%= abvH %> </span></li>
+        <li><span class="wine-attribute"><%= abvL %> </span></li>
+        <li><span class="wine-attribute"><%= calL %> </span></li>
+        <li><span class="wine-attribute"><%= calH %> </span></li>
+        <li><span class="wine-attribute"><%= open %> </span></li>
+        <li><span class="wine-attribute"><%= storage %> </span></li>
+        </script>
+        <script type="text/template" id="winelist-template">
+
+        </script>
+    </div>
 
     <!-- Libraries -->
     <script src="lib/jquery/jquery-2.1.0.min.js"></script>
@@ -17,6 +36,8 @@
 
     <!-- Plugins -->
     
+
+
     <!-- Application -->
     <script src="js/main.js"></script>
 
