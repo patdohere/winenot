@@ -3,26 +3,105 @@
     <title>wine not?</title>
 
     <!-- Style Sheets -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
   </head>
   <body>
     <div id="content">
-       <script type="text/template" id="wine-template">
-        <h1><span class="wine-attribute"> <%= wine %> </span></h1>
-        <li><span class="wine-attribute"> Type: <%= type %> </span></li>
-        <li><span class="wine-attribute"> Color: <%= color %> </span></li>
-        <li><span class="wine-attribute"> Glass: <%= glass %> </span></li>
-        <li><span class="wine-attribute"> Serving temperture: <%= serving %> <%= servingF %>F <%= servingC %>C </span></li>
-        <li><span class="wine-attribute"> Alcohol concentration: <%= abvH %>&#37; - <%= abvL %>&#37;</span></li>
-        <li><span class="wine-attribute"> Calorie range: <%= calL %> - <%= calH %> </span></li>
-        <li><span class="wine-attribute"> Open Bottle Shelf Life: <%= open %> </span></li>
-        <li><span class="wine-attribute"> Storage Shelf Life: <%= storage %> </span></li>
-        </script>
-        <script type="text/template" id="winelist-template">
-
-        </script>
     </div>
+
+    <!-- Templates -->
+   <script type="text/template" id="wine-template">
+    <h1><span class="wine-attribute"> <%= wine %> </span></h1>
+    <li><span class="wine-attribute"> Type: <%= type %> </span></li>
+    <li><span class="wine-attribute"> Color: <%= color %> </span></li>
+    <li><span class="wine-attribute"> Glass: <%= glass %> </span></li>
+    <li><span class="wine-attribute"> Serving temperture: <%= serving %> <%= servingF %>F <%= servingC %>C </span></li>
+    <li><span class="wine-attribute"> Alcohol concentration: <%= abvH %>&#37; - <%= abvL %>&#37;</span></li>
+    <li><span class="wine-attribute"> Calorie range: <%= calL %> - <%= calH %> </span></li>
+    <li><span class="wine-attribute"> Open Bottle Shelf Life: <%= open %> </span></li>
+    <li><span class="wine-attribute"> Storage Shelf Life: <%= storage %> </span></li>
+    </script>
+    
+    <script type="text/template" id="winelist-template">
+
+    </script>
+
+    <script type="text/template" id="home-template">
+        <div class="row show-grid">
+          <div class="col-md-12">
+            <div class="jumbotron">
+              <div class="page-header" align="center">
+                <img src="img/logo_mockup.png"  align="center">
+                <br>
+                <p id="intro">Looking for the perfect dish to go with this evening's wine? Look no further! </p>
+              </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="row show-grid">
+          <div class="col-md-4">
+            <div class="jumbotron">
+              <div class="page-header" align="center">
+                <h1><span class="glyphicon glyphicon-book"></span> <br>
+
+                  <img src="img/curious.png" align="middle"><br>
+
+                  <small>Learn about history and how wine is made.</small></h1>
+              <hr>
+              <p>
+                <a class="btn btn-default" role="button" href="learn.html">
+                  wine not learn?
+                </a>
+              </p>
+            </div>
+          </div>      
+        </div>
+          <div class="col-md-4">
+            <div class="jumbotron">
+              <div class= "page-header" align = "center">
+                <h1><span class="glyphicon glyphicon-cutlery"></span> <br>
+
+                  <img src="img/hungry.png" align="center">
+                  <br/>
+
+                  <small>Combine your food with wine like a pro.</small></h1>
+                <hr>
+                <p>
+                  <a class="btn btn-default" role="button" href="eat.html">
+                    wine not eat?
+                  </a>
+                </p>
+              </div>
+            </div>     
+          </div>
+          <div class="col-md-4">
+            <div class="jumbotron">
+              <div class="page-header" align="center">
+                <h1><span class="glyphicon glyphicon-glass"></span> 
+                  <br>
+                  <img src="img/thirsty.png" align="center">
+
+                  <br>
+                  <small>What you need to know about all your favorite wines.</small></h1>
+                <p>
+                  <hr>
+                  <a class="btn btn-default" role="button" href="#wines">
+                    wine not drink?
+                  </a>
+                </p>
+
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="winenot-footer" height="100px">
+
+
+        </div>
+    </script>
 
     <!-- Libraries -->
     <script src="lib/jquery/jquery-2.1.0.min.js"></script>

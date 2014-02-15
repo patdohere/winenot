@@ -57,6 +57,14 @@ window.WineListView = Backbone.View.extend({
 });
 
 window.HomeView = Backbone.View.extend({
+  initialize: function() {
+
+  },
+
+  render: function() {
+    $(this.el).html($('#home-template').html());
+    return this;
+  }
 
 })
 
@@ -74,7 +82,9 @@ window.AppRouter = Backbone.Router.extend({
   },
 
   home: function() {
-
+    console.log('home route');
+    hv = new HomeView();
+    $('#content').html(hv.render().el);
   },
 
   wines: function() {
