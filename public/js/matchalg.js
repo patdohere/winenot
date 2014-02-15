@@ -3,7 +3,7 @@ window.Match = function(array) {
     return console.log('Invalid Input');
 
   var max = 0;
-  var maxIdx = 0;
+  var maxIdx = -1;
   var temp = [];
 
   for (var i = 0; i < 9; i++) {
@@ -17,18 +17,37 @@ window.Match = function(array) {
     MatchTable[6][array[6]][i];
 
     if (max < temp[i]) {
-      console.log('ajsdif');
       max = temp[i];
       maxIdx = i;
     }
   };
 
-  return temp+' max:'+max+' maxID:'+maxIdx;
-  // if (maxIdx == 0) {
-  //   return 'No Match';
-  // } else if (maxIdx == 1) {
-  //   return 'Bold Red';
-  // }
+  console.log(temp+' max:'+max+' maxID:'+maxIdx);
+
+
+  switch(maxIdx+1)
+  {
+  case 1:
+    return 'Bold Red';
+  case 2:
+    return 'Medium Red';
+  case 3:
+    return 'Light Red';
+  case 4:
+    return 'Rose';
+  case 5:
+    return 'Rich White';
+  case 6:
+    return 'Dry White';
+  case 7:
+    return 'Sparkling';
+  case 8:
+    return 'Sweet White';
+  case 9:
+    return 'Dessert';
+  default:
+    return null;
+  }
 
 }
 
